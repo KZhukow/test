@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F4F5FC;
+}
+
+.container {
+  min-height: 480px;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftPanel {
+  background: #5A61ED;
+  width: 137px;
+  position: relative;
+}
+
+.leftPanelTitle {
+  color: #FFF;
+  font-size: 49px;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  transform: rotate(-90deg);
+  position: absolute;
+  width: max-content;
+  bottom: 70px;
+  right: -40px;
+  user-select: none;
+}
