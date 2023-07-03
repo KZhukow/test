@@ -1,0 +1,11 @@
+.title {
+  color: #000;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.titleLink {
+  color: #5A61ED;
+  text-decoration: underline;
+  cursor: pointer;
+}
