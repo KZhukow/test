@@ -16,3 +16,9 @@
   bottom: 0;
   right: 0;
 }
+
+@media (max-width: 550px) {
+  .container {
+    width: 95vw;
+  }
+}

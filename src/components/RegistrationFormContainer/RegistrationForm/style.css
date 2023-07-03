@@ -123,6 +123,7 @@ label.radioControlLabel input[type="radio"]{
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  gap: 10px;
 }
 
 .formFooter {
@@ -162,4 +163,29 @@ label.radioControlLabel input[type="radio"]{
 
 .shake {
   animation: shake 0.5s;
+}
+
+
+@media (max-width: 550px) {
+  .formRow {
+    flex-direction: column;
+  }
+
+  label,
+  .birthDaySection,
+  .genderSection {
+    width: auto;
+  }
+
+  .birthDayInputContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .formFooter {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5px;
+  }
 }
