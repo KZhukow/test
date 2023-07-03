@@ -165,6 +165,25 @@ label.radioControlLabel input[type="radio"]{
   animation: shake 0.5s;
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.invisible.visible {
+  animation: fadeInDown 0.5s forwards;
+}
+
 
 @media (max-width: 550px) {
   .formRow {

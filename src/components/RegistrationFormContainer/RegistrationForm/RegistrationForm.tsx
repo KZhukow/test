@@ -36,6 +36,8 @@ export default function RegistrationForm() {
   const [shakeButton, setShakeButton] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const [isBlockVisibleCount, setIsBlockVisibleCount] = useState(1);
+
   const navigate = useNavigate();
 
   const email = watch('email');
@@ -79,7 +81,11 @@ export default function RegistrationForm() {
             name="firstName"
             control={control}
             render={({ field }) => (
-              <label htmlFor="firstName">
+              <label
+                htmlFor="firstName"
+                className="invisible visible"
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 First Name
                 <input
                   {...field}
@@ -98,7 +104,11 @@ export default function RegistrationForm() {
             name="lastName"
             control={control}
             render={({ field }) => (
-              <label htmlFor="lastName">
+              <label
+                htmlFor="lastName"
+                className={`invisible ${isBlockVisibleCount > 1 ? 'visible' : ''}`}
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 Last Name
                 <input
                   {...field}
@@ -119,7 +129,11 @@ export default function RegistrationForm() {
             name="nationality"
             control={control}
             render={({ field }) => (
-              <label htmlFor="nationality">
+              <label
+                htmlFor="nationality"
+                className={`invisible ${isBlockVisibleCount > 2 ? 'visible' : ''}`}
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 Nationality
                 <select
                   {...field}
@@ -150,7 +164,11 @@ export default function RegistrationForm() {
             name="email"
             control={control}
             render={({ field }) => (
-              <label htmlFor="email">
+              <label
+                htmlFor="email"
+                className={`invisible ${isBlockVisibleCount > 3 ? 'visible' : ''}`}
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 E-mail
                 <input
                   {...field}
@@ -167,7 +185,10 @@ export default function RegistrationForm() {
           />
         </div>
         <div className="formRow">
-          <div className="birthDaySection">
+          <div
+            className={`birthDaySection invisible ${isBlockVisibleCount > 4 ? 'visible' : ''}`}
+            onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+          >
             Date of Birth
             <div className="birthDayInputContainer">
               <Controller
@@ -237,7 +258,10 @@ export default function RegistrationForm() {
               {errors.dayOfBirth?.message}
             </div>
           </div>
-          <div className="genderSection">
+          <div
+            className={`genderSection invisible ${isBlockVisibleCount > 5 ? 'visible' : ''}`}
+            onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+          >
             Gender
             <div className="genderInputContainer">
               <Controller
@@ -298,7 +322,11 @@ export default function RegistrationForm() {
             name="password"
             control={control}
             render={({ field }) => (
-              <label htmlFor="password">
+              <label
+                htmlFor="password"
+                className={`invisible ${isBlockVisibleCount > 6 ? 'visible' : ''}`}
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 Password
                 <input
                   {...field}
@@ -320,7 +348,11 @@ export default function RegistrationForm() {
             name="repeatPassword"
             control={control}
             render={({ field }) => (
-              <label htmlFor="repeatPassword">
+              <label
+                htmlFor="repeatPassword"
+                className={`invisible ${isBlockVisibleCount > 7 ? 'visible' : ''}`}
+                onAnimationEnd={() => setIsBlockVisibleCount((s) => s + 1)}
+              >
                 Confirm Password
                 <input
                   {...field}
