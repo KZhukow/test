@@ -131,18 +131,6 @@ label.radioControlLabel input[type="radio"]{
   align-items: center;
 }
 
-.formFooter p {
-  color: #000;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.formFooter p span {
-  color: #5A61ED;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .submitBtn {
   color: #FFF;
   font-size: 14px;

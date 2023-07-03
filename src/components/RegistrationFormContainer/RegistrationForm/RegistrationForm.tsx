@@ -7,6 +7,7 @@ import './style.css';
 import { checkNewPass, emailRegex, passwordRegex, validateDate } from '../../../const/utils';
 import { daysOfBirth, monthsOfBirth, nationalityData, newPasswordMinLength, requiredMsg, wrongPasswordMsgs, yearsOfBirth } from '../../../const/const';
 import { ReactComponent as ShapeSvg } from '../../../assets/shape.svg';
+import LinkToLogin from '../../_Shared/LinkToLogin/LinkToLogin';
 
 const defaultValues: IPostRegistrationBody = {
   firstName: '',
@@ -336,11 +337,7 @@ export default function RegistrationForm() {
         </div>
       </div>
       <div className="formFooter">
-        <p>
-          Have an account?
-          {' '}
-          <span>Login</span>
-        </p>
+        <LinkToLogin />
         <button
           className={`submitBtn ${shakeButton ? 'shake' : ''}`}
           type="submit"
